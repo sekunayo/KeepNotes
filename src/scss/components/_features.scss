@@ -1,0 +1,42 @@
+.features {
+  grid-column: 2/3;
+  display: flex;
+  flex-direction: column;
+  &-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 20px;
+    height: 250px;
+    align-items: center;
+    &-box {
+      border-right: 1px solid rgba(132, 132, 132, 0.5);
+      &-inner {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        gap: 15px;
+      }
+      &-text {
+        color: $text--color;
+        font-size: 0.875rem;
+        letter-spacing: 0.2px;
+      }
+      &:last-child {
+        border: none;
+      }
+    }
+  }
+  &-heading-box {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    & i {
+      font-size: 1.125rem;
+    }
+  }
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+}

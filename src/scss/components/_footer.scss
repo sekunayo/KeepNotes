@@ -1,0 +1,39 @@
+.footer-top {
+  grid-column: 2/3;
+  background-color: $light--shade;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  height: 350px;
+  &-heading {
+    font-size: 2.3rem;
+    text-align: center;
+  }
+  &-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 43%;
+  }
+}
+.footer-bottom {
+  grid-column: 2/3;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  &-lists {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 35%;
+    & li:first-child {
+      list-style: none;
+    }
+  }
+}

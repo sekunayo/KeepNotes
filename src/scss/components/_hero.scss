@@ -1,0 +1,34 @@
+.hero {
+  grid-column: 2/3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  &-heading {
+    text-align: center;
+    font-weight: 900;
+    font-size: 2.3rem;
+    letter-spacing: 0.5px;
+    height: 90px;
+    display: flex;
+    align-items: flex-end;
+    color: $heading--color;
+  }
+  &-button {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &-image {
+    width: 80%;
+    margin-top: 20px;
+    height: 700px;
+    & img {
+      max-width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

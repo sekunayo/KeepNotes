@@ -1,0 +1,28 @@
+@import "../abstracts/variables";
+
+.header {
+  grid-column: 2/3;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 20px;
+  &-logo {
+    display: flex;
+    align-items: center;
+  }
+  &-nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    &-container {
+      display: flex;
+      justify-content: space-between;
+      width: 70%;
+      &-links {
+        font-size: 1rem;
+        font-weight: 500;
+        list-style: none;
+        color: $heading--color;
+      }
+    }
+  }
+}

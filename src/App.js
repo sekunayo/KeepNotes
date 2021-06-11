@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import Features from "./Components/Features/Features";
+import FirstUniqueSellingPoint from "./Components/FirstUniqueSellingPoint/FirstUniqueSellingPoint";
+import FooterBottom from "./Components/FooterBottom/FooterBottom";
+import FooterTop from "./Components/FooterTop/FooterTop";
+import Header from "./Components/Header/Header";
+import Hero from "./Components/Hero/Hero";
+import SecondUniqueSellingPoint from "./Components/SecondUniqueSellingPoint/SecondUniqueSellingPoint";
+import Testimonials from "./Components/Testimonials/Testimonials.js";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="first__section">
+        <Header />
+        <Hero />
+        <Features />
+      </div>
+      <div className="second__section">
+        <FirstUniqueSellingPoint />
+        <SecondUniqueSellingPoint />
+        <Testimonials />
+      </div>
+      <div className="third-section">
+        <FooterTop />
+      </div>
+      <div className="fourth-section">
+        <FooterBottom />
+      </div>
+    </>
   );
 }
 
