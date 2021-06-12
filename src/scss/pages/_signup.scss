@@ -1,0 +1,103 @@
+.signup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 650px;
+  &-box {
+    display: grid;
+    grid-template-rows: 100px 90px 140px 100px 100px;
+  }
+  &-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    &-input-container {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      & input {
+        border: 1px solid $text--color;
+        padding: 10px 15px;
+        border-radius: 5px;
+        outline: 0;
+        background-color: $light--shade;
+        color: $text--color;
+        font-size: 1rem;
+        font-weight: 500;
+      }
+      & label {
+        font-weight: 700;
+      }
+    }
+  }
+  &-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &-heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &-title {
+      font-weight: 900;
+      font-size: 1.8rem;
+      letter-spacing: 0.1px;
+      text-align: center;
+    }
+  }
+  &-progress-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    &-circle {
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &-line {
+      width: 40px;
+      height: 5px;
+    }
+  }
+  &-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &-box {
+      height: 70px;
+      width: 70px;
+      background-color: $heading--color;
+      border-radius: 50%;
+      border: 1px solid transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $light--shade;
+      font-size: 1.2rem;
+    }
+  }
+}
+.blank {
+  border: 1px solid $heading--color;
+  background-color: $light--shade;
+  color: $heading--color;
+  &-line {
+    background-color: $text--color;
+  }
+}
+.complete {
+  background-color: $heading--color;
+  color: $light--shade;
+  &-line {
+    background-color: $heading--color;
+  }
+}
+.final-setup-margin {
+  margin-bottom: 20px;
+}

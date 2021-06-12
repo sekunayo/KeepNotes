@@ -98,6 +98,17 @@ p {
   background-color: #212121;
 }
 
+.form-button {
+  font-weight: 500;
+  outline: 0;
+  border: 1px solid transparent;
+  color: #fff;
+  font-size: 1rem;
+  border-radius: 5px;
+  padding: 15px 10px;
+  background-color: #212121;
+}
+
 .hero {
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
@@ -572,4 +583,186 @@ p {
 
 .footer-bottom-lists li:first-child {
   list-style: none;
+}
+
+.signup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 650px;
+}
+
+.signup-box {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 100px 90px 140px 100px 100px;
+      grid-template-rows: 100px 90px 140px 100px 100px;
+}
+
+.signup-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+
+.signup-form-input-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+
+.signup-form-input-container input {
+  border: 1px solid #757575;
+  padding: 10px 15px;
+  border-radius: 5px;
+  outline: 0;
+  background-color: #fff;
+  color: #757575;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.signup-form-input-container label {
+  font-weight: 700;
+}
+
+.signup-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.signup-heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.signup-heading-title {
+  font-weight: 900;
+  font-size: 1.8rem;
+  letter-spacing: 0.1px;
+  text-align: center;
+}
+
+.signup-progress-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.signup-progress-bar-circle {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.signup-progress-bar-line {
+  width: 40px;
+  height: 5px;
+}
+
+.signup-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.signup-icon-box {
+  height: 70px;
+  width: 70px;
+  background-color: #212121;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.blank {
+  border: 1px solid #212121;
+  background-color: #fff;
+  color: #212121;
+}
+
+.blank-line {
+  background-color: #757575;
+}
+
+.complete {
+  background-color: #212121;
+  color: #fff;
+}
+
+.complete-line {
+  background-color: #212121;
+}
+
+.final-setup-margin {
+  margin-bottom: 20px;
 }

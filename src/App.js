@@ -1,32 +1,29 @@
-import Features from "./Components/Features/Features";
-import FirstUniqueSellingPoint from "./Components/FirstUniqueSellingPoint/FirstUniqueSellingPoint";
-import FooterBottom from "./Components/FooterBottom/FooterBottom";
-import FooterTop from "./Components/FooterTop/FooterTop";
-import Header from "./Components/Header/Header";
-import Hero from "./Components/Hero/Hero";
-import SecondUniqueSellingPoint from "./Components/SecondUniqueSellingPoint/SecondUniqueSellingPoint";
-import Testimonials from "./Components/Testimonials/Testimonials.js";
+import React from "react";
+import Signup from "./screens/Signup/Signup";
+import { Route, Switch } from "react-router-dom";
+import PersonalInfo from "./screens/Signup/PersonalInfo/PersonalInfo";
+import AdditionalInfo from "./screens/Signup/AdditionalInfo/AdditionalInfo";
+import Landing from "./screens/Landing/Landing";
+import FinalSetup from "./screens/Signup/FinalSetup/FinalSetup";
+import SignupContextProvider from "../src/context/SignupContext/SignupContext";
 
 function App() {
   return (
-    <>
-      <div className="first__section">
-        <Header />
-        <Hero />
-        <Features />
-      </div>
-      <div className="second__section">
-        <FirstUniqueSellingPoint />
-        <SecondUniqueSellingPoint />
-        <Testimonials />
-      </div>
-      <div className="third-section">
-        <FooterTop />
-      </div>
-      <div className="fourth-section">
-        <FooterBottom />
-      </div>
-    </>
+    <SignupContextProvider>
+      <>
+        <Switch>
+          <Route path="/" exact component={Landing}></Route>
+          <Route component={Signup} exact path="/signup"></Route>
+          <Route component={PersonalInfo} exact path="/personalInfo"></Route>
+          <Route
+            component={AdditionalInfo}
+            exact
+            path="/additionalInfo"
+          ></Route>
+          <Route component={FinalSetup} exact path="/finalSetup"></Route>
+        </Switch>
+      </>
+    </SignupContextProvider>
   );
 }
 
