@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "../../images/logo.png";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
@@ -12,9 +13,11 @@ function Header() {
         <ul className="header-nav-container">
           <li className="header-nav-container-links">About</li>
           <li className="header-nav-container-links">Blog</li>
-          <li className="header-nav-container-links">
-            <button className="border--button--style">Sign Up</button>
-          </li>
+          <Link to="/signup">
+            <li className="header-nav-container-links">
+              <button className="border--button--style">Sign Up</button>
+            </li>
+          </Link>
         </ul>
       </nav>
     </header>

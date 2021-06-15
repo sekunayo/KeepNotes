@@ -1,71 +1,54 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useEffect, useState } from "react";
 import { useHistory } from "react-router";
+import { firstArray, secondArray, thirdArray, fourthArray } from "../../data";
 
 export const SignupContext = createContext();
 function SignupContextProvider(props) {
-  const firstProgressArray = {
-    firstElement: "complete",
-    secondElement: "complete-line",
-    thirdElement: "complete-line",
-    fourthElement: "blank",
-    fifthElement: "blank-line",
-    sixthElement: "blank-line",
-    seventhElement: "blank",
-    eigthElement: "blank-line",
-    ninthElement: "blank-line",
-    tenthElement: "blank",
+  let history = useHistory();
+  const [progress, setProgress] = useState(firstArray);
+  const [dataItem, setDataItem] = useState({});
+  useEffect(() => {
+    let data = localStorage.getItem("data");
+    if (data) {
+      data = JSON.parse(localStorage.getItem("data"));
+      setDataItem(data);
+    }
+  }, []);
+  const submitPersonalInfo = (values) => {
+    let { fullName, username } = values;
+    let newData = { ...dataItem, fullName, username };
+    localStorage.setItem("data", JSON.stringify(newData));
+    setDataItem(newData);
+    setProgress(secondArray);
   };
-  const secondProgressArray = {
-    firstElement: "complete",
-    secondElement: "complete-line",
-    thirdElement: "complete-line",
-    fourthElement: "complete",
-    fifthElement: "complete-line",
-    sixthElement: "blank-line",
-    seventhElement: "blank",
-    eigthElement: "blank-line",
-    ninthElement: "blank-line",
-    tenthElement: "blank",
+  const submitAdditionalInfo = (values) => {
+    let { email, address } = values;
+    let newData = { ...dataItem, email, address };
+    localStorage.setItem("data", JSON.stringify(newData));
+    setDataItem(newData);
+    setProgress(thirdArray);
   };
-  const thirdProgressArray = {
-    firstElement: "complete",
-    secondElement: "complete-line",
-    thirdElement: "complete-line",
-    fourthElement: "blank",
-    fifthElement: "blank-line",
-    sixthElement: "blank-line",
-    seventhElement: "blank",
-    eigthElement: "blank-line",
-    ninthElement: "blank-line",
-    tenthElement: "blank",
+  const submitPassword = (values) => {
+    let { password, confirmPassword } = values;
+    let newData = { ...dataItem, password, confirmPassword };
+    localStorage.setItem("data", JSON.stringify(newData));
+    setDataItem(newData);
+    setProgress(fourthArray);
   };
-  const fourthProgressArray = {
-    firstElement: "complete",
-    secondElement: "complete-line",
-    thirdElement: "complete-line",
-    fourthElement: "complete",
-    fifthElement: "complete-line",
-    sixthElement: "complete-line",
-    seventhElement: "complete",
-    eigthElement: "complete-line",
-    ninthElement: "complete-line",
-    tenthElement: "complete",
+  const submitFinalInfo = () => {
+    history.push("/");
+    setProgress(firstArray);
   };
-  const [progress, setProgress] = useState(firstProgressArray);
-  const history = useHistory();
-  const moveToAdditionalInfo = () => (e) => {
-    e.preventDefault();
-    setProgress(secondProgressArray);
-    history.push("/additionalInfo");
-  };
-  const moveToFinal = () => (e) => {
-    e.preventDefault();
-    setProgress(fourthProgressArray);
-    history.push("/finalSetup");
-  };
+
   return (
     <SignupContext.Provider
-      value={{ progress, moveToAdditionalInfo, moveToFinal }}
+      value={{
+        progress,
+        submitPersonalInfo,
+        submitAdditionalInfo,
+        submitPassword,
+        submitFinalInfo,
+      }}
     >
       {props.children}
     </SignupContext.Provider>

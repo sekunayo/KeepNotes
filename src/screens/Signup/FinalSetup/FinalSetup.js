@@ -1,17 +1,18 @@
 import React, { useContext } from "react";
 import ProgressBar from "../ProgressBar/ProgressBar.js";
-import SignupContext from "../../../context/SignupContext/SignupContext";
+import { SignupContext } from "../../../context/SignupContext/SignupContext";
+import { Link } from "react-router-dom";
 
 function FinalSetup() {
-  const progress = useContext(SignupContext);
-  console.log(progress);
+  const { progress, submitFinalInfo } = useContext(SignupContext);
+  console.log(progress.step);
   return (
     <div className="signup">
       <div className="signup-box">
         <div className="signup-logo">
           <p>Keep notes</p>
         </div>
-        <ProgressBar arrayType={progress} />
+        <ProgressBar arrayType={progress.classes} />
         <div className="signup-icon">
           <div className="signup-icon-box">
             <i class="fas fa-check"></i>
@@ -23,7 +24,7 @@ function FinalSetup() {
             You hae completed onboarding,you can start using KeepNotes!
           </p>
         </div>
-        <form className="signup-form">
+        <form className="signup-form" onSubmit={submitFinalInfo}>
           <button type="submit" className="form-button">
             Launch KeepNotes
           </button>

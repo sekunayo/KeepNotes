@@ -107,6 +107,7 @@ p {
   border-radius: 5px;
   padding: 15px 10px;
   background-color: #212121;
+  width: 100%;
 }
 
 .hero {
@@ -224,6 +225,11 @@ p {
       -ms-flex-align: center;
           align-items: center;
   height: 220px;
+}
+
+.error {
+  font-size: 0.75rem;
+  color: red;
 }
 
 .features {
@@ -601,8 +607,8 @@ p {
 .signup-box {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 100px 90px 140px 100px 100px;
-      grid-template-rows: 100px 90px 140px 100px 100px;
+  -ms-grid-rows: 100px 90px 140px 150px 100px;
+      grid-template-rows: 100px 90px 140px 150px 100px;
 }
 
 .signup-form {
@@ -742,6 +748,25 @@ p {
           align-items: center;
   color: #fff;
   font-size: 1.2rem;
+}
+
+.signup-select {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  grid-column-gap: 30px;
+}
+
+.signup-select-box {
+  width: 250px;
+  padding: 10px;
+  border: 3px solid #212121;
+  border-radius: 5px;
+}
+
+.signup-select-box p {
+  font-size: 0.9rem;
 }
 
 .blank {
