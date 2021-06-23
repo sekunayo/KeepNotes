@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import image from "../../images/image.png";
 
 function Hero() {
@@ -11,7 +12,9 @@ function Hero() {
         Plan,Organize,Collaborate,on every platform,for free.
       </p>
       <div className="hero-button">
-        <button className="background--button--style">Get Started</button>
+        <Link to="/login">
+          <button className="background--button--style">Get Started</button>
+        </Link>
       </div>
       <div className="hero-image">
         <img src={image} alt="hero__image"></img>

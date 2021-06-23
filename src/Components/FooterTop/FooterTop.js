@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function FooterTop() {
   return (
@@ -13,7 +14,9 @@ function FooterTop() {
           antevolutpat gravida.
         </p>
         <div className="footer-top-button">
-          <button className="background--button--style">Sign Up</button>
+          <Link to="/signup">
+            <button className="background--button--style">Sign Up</button>
+          </Link>
         </div>
       </div>
     </div>

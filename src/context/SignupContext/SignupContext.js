@@ -7,6 +7,7 @@ function SignupContextProvider(props) {
   let history = useHistory();
   const [progress, setProgress] = useState(firstArray);
   const [dataItem, setDataItem] = useState({});
+
   useEffect(() => {
     let data = localStorage.getItem("data");
     if (data) {
@@ -39,6 +40,14 @@ function SignupContextProvider(props) {
     history.push("/");
     setProgress(firstArray);
   };
+  const validateInfo = (values) => {
+    let { email, password } = values;
+    if (dataItem?.email === email && dataItem?.password === password) {
+      alert("Correct Account");
+    } else {
+      alert("Wrong Account");
+    }
+  };
 
   return (
     <SignupContext.Provider
@@ -48,6 +57,7 @@ function SignupContextProvider(props) {
         submitAdditionalInfo,
         submitPassword,
         submitFinalInfo,
+        validateInfo,
       }}
     >
       {props.children}

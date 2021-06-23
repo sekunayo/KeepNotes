@@ -1,0 +1,21 @@
+.custom-editor {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  height: 70px;
+  align-items: center;
+  border-bottom: 1px solid lightgray;
+  border-top: 1px solid lightgray;
+
+  &-buttons {
+    background-color: transparent;
+    color: $heading--color;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+  &-textarea {
+    padding-top: 20px;
+  }
+}

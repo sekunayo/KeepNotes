@@ -34,8 +34,7 @@ function PersonalizedInfo() {
         <div className="signup-heading">
           <h2 className="signup-heading-title">Security</h2>
           <p className="text text__center">
-            Kindly create password to make sure your account is as secure as
-            ever....
+            Kindly secure your account with us...
           </p>
         </div>
         <form className="signup-form" onSubmit={formik.handleSubmit}>
@@ -47,7 +46,7 @@ function PersonalizedInfo() {
               placeholder="Password"
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
-              value={`*${formik.touched.password && formik.values.password}`}
+              value={formik.values.password}
             ></input>
           </div>
           <p className="error">

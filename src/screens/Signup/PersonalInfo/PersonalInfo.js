@@ -3,6 +3,7 @@ import React, { useContext, useEffect } from "react";
 import { SignupContext } from "../../../context/SignupContext/SignupContext.js";
 import ProgressBar from "../ProgressBar/ProgressBar.js";
 import * as yup from "yup";
+import { Link } from "react-router-dom";
 
 const signupSchema = yup.object({
   fullName: yup.string().required("* fullname is a required field"),
@@ -73,6 +74,12 @@ function PersonalInfo() {
             Next
           </button>
         </form>
+        <p className="text bottom-text">
+          <span>Already have an account ?</span>
+          <Link className="bottom-text-link" to="/login">
+            Login
+          </Link>
+        </p>
       </div>
     </div>
   );

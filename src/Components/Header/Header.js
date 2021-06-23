@@ -13,6 +13,9 @@ function Header() {
         <ul className="header-nav-container">
           <li className="header-nav-container-links">About</li>
           <li className="header-nav-container-links">Blog</li>
+          <Link to="/login">
+            <li className="header-nav-container-links">Login</li>
+          </Link>
           <Link to="/signup">
             <li className="header-nav-container-links">
               <button className="border--button--style">Sign Up</button>

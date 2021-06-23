@@ -2,11 +2,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 650px;
+  height: 700px;
 
   &-box {
     display: grid;
-    grid-template-rows: 100px 90px 140px 150px 100px;
+    grid-template-rows: 100px 90px 140px auto 40px;
   }
   &-form {
     display: flex;

@@ -1,0 +1,68 @@
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 650px;
+
+  &-box {
+    display: grid;
+    grid-template-rows: 90px 110px auto 50px;
+    width: 400px;
+  }
+  &-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    &-input-container {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      & input {
+        border: 1px solid $text--color;
+        padding: 10px 15px;
+        border-radius: 5px;
+        outline: 0;
+        background-color: $light--shade;
+        color: $text--color;
+        font-size: 1rem;
+        font-weight: 500;
+      }
+      & label {
+        font-weight: 700;
+      }
+    }
+  }
+  &-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &-heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &-title {
+      font-weight: 900;
+      font-size: 1.8rem;
+      letter-spacing: 0.1px;
+      text-align: center;
+    }
+  }
+}
+
+.final-setup-margin {
+  margin-bottom: 20px;
+}
+.bottom-text {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  & span {
+    font-size: 0.8rem;
+  }
+  &-link {
+    color: $heading--color;
+    text-decoration: none;
+  }
+}
